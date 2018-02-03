@@ -6,7 +6,7 @@
 */DerivedDataCache
 */Intermediate
 */Saved
-Escape/Content/StarterContent/
+*/Content/StarterContent/
 
 ######################
 # VS GENERATED FILES #
@@ -91,3 +91,4 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+*.uasset
