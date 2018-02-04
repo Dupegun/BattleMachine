@@ -92,3 +92,4 @@ Plugins/*/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
+Battle_Machine/Content/_Levels/BattleGround.umap
