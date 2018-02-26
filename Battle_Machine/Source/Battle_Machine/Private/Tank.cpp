@@ -1,6 +1,6 @@
 
-#include "TankAimingComponent.h"
 #include "Tank.h"
+#include "TankAimingComponent.h"
 
 
 // Sets default values
