@@ -93,3 +93,5 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 
 Battle_Machine/Content/_Levels/BattleGround.umap
+sh.exe.stackdump
+bash.exe.stackdump
