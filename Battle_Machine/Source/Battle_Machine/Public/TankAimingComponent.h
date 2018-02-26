@@ -3,7 +3,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Kismet/GameplayStatics.h"
+#include "Kismet/GameplayStatics.h" //for SuggestProjectileVelocity()
 #include "TankAimingComponent.generated.h"
 
 //Forward declaration
