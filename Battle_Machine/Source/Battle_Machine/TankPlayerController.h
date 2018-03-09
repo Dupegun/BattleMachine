@@ -22,11 +22,11 @@ private:
 
 	ATank * GetControlledTank() const;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditDefaultsOnly)
 		float CrossHaitXLocation = 0.5f;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditDefaultsOnly)
 		float CrossHaitYLocation = 0.33333f;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditDefaultsOnly)
 		float LineTraceRangeParameter = 1000000.f; //10 km
 
 	//To start moving the barrel direction to the crosshair direction
