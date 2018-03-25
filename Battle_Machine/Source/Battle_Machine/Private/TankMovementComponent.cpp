@@ -14,9 +14,8 @@ void UTankMovementComponent::RequestDirectMove(const FVector & MoveVelocity, boo
 	auto AIForwardIntention = MoveVelocity.GetSafeNormal();
 
 	IntendMoveForward(FVector::DotProduct(TankForward, AIForwardIntention));
-	//UE_LOG(LogTemp, Warning, TEXT("%s _____ %f"), *TankName, *AiForwardIntention);
 
-	IntendMoveRight(FVector::CrossProduct(AIForwardIntention, TankForward).Z);
+	IntendTurnRight(FVector::CrossProduct(AIForwardIntention, TankForward).Z);
 }
 
 void UTankMovementComponent::IntendMoveForward(float Throw)
@@ -27,24 +26,10 @@ void UTankMovementComponent::IntendMoveForward(float Throw)
 	RightTrack->SetThrottle(Throw);
 }
 
-void UTankMovementComponent::IntendMoveBackward(float Throw)
-{
-	if (!LeftTrack || !RightTrack) { return; }
-
-	LeftTrack->SetThrottle(-Throw);
-	RightTrack->SetThrottle(-Throw);
-}
-void UTankMovementComponent::IntendMoveRight(float Throw)
+void UTankMovementComponent::IntendTurnRight(float Throw)
 {
 	if (!LeftTrack || !RightTrack) { return; }
 
 	LeftTrack->SetThrottle(Throw);
 	RightTrack->SetThrottle(-Throw);
-}
-void UTankMovementComponent::IntendMoveLeft(float Throw)
-{
-	if (!LeftTrack || !RightTrack) { return; }
-
-	LeftTrack->SetThrottle(-Throw);
-	RightTrack->SetThrottle(Throw);
 }
