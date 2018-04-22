@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -6,6 +5,7 @@
 #include "TankPlayerController.generated.h" //must be last
 
 class ATank;
+class UTankAimingComponent;
 
 UCLASS()
 class BATTLE_MACHINE_API ATankPlayerController : public APlayerController
@@ -21,7 +21,10 @@ public:
 protected:
 
 	UFUNCTION(BlueprintCallable, Category = "Setup")
-	ATank * GetControlledTank() const;
+	ATank* GetControlledTank() const;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
+	void FoundAimingComponent(UTankAimingComponent* AimingCompRef);
 
 private:
 
